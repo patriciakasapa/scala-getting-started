@@ -1,10 +1,13 @@
 package io.turntabl.scalagettingstarted
 
 object MyApp extends App {
+
+ //2. Printing the values of variables
   val firstname = "Patricia"
   val town = "Kwahu Abetifi"
   println(s"My name is $firstname, and i come from $town")
 
+ //3.Returning three times, a variable
   def threeTimes(i: String) = i * 3
   println(threeTimes("we"))
 
@@ -26,11 +29,13 @@ object MyApp extends App {
    case _ => false
   }
 
- def areWeekendDays(days: String*) = days map (justday => isWeekendDay(justday))
+ //(map => isWeekendDay(days))
+ def areWeekendDays(days: String*) = days map isWeekendDay
 
  areWeekendDays("Monday", "Saturday") foreach println
 
- def stringPrint(s: String, i: Int) = s * i
- println(stringPrint("Malam", 4))
+// def stringPrint(s: String, i: Int) = s * i
+// println(stringPrint("Malam", 4))
+
 }
 
